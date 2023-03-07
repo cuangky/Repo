@@ -33,7 +33,6 @@ PKG_CONFIG_DEPENDS:= \
 LUCI_TITLE:=LuCI support for PassWall
 LUCI_PKGARCH:=all
 LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
-	+lua-maxminddb +ipset +ipt2socks +iptables-mod-conntrack-extra +iptables-mod-iprange +iptables-mod-socket +iptables-mod-tproxy +kmod-ipt-nat \
 	+dns2socks +dns2tcp +ip-full +libuci-lua +lua +luci-compat +luci-lib-jsonc \
 	+microsocks +resolveip +tcping +unzip \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Brook:brook \
@@ -54,7 +53,7 @@ LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Trojan_Plus:trojan-plus \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray:v2ray-core \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geodata:v2ray-geoip \
-	+v2ray-geosite \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geodata:v2ray-geosite \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin:v2ray-plugin \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Xray:xray-core \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Xray_Plugin:xray-plugin
@@ -94,7 +93,7 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_Brook
 config PACKAGE_$(PKG_NAME)_INCLUDE_ChinaDNS_NG
 	bool "Include ChinaDNS-NG"
 	select PACKAGE_ipset
-	default y
+	default n
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_Haproxy
 	bool "Include Haproxy"
@@ -149,11 +148,11 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_Trojan_Plus
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray
 	bool "Include V2ray"
-	default n
+	default y if aarch64||arm||i386||x86_64
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geodata
 	bool "Include V2ray_Geodata"
-	default y if aarch64||i386||x86_64
+	default n
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin
 	bool "Include V2ray-Plugin (Shadowsocks Plugin)"
@@ -161,7 +160,7 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_Xray
 	bool "Include Xray"
-	default y
+	default y if aarch64||arm||i386||x86_64
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_Xray_Plugin
 	bool "Include Xray-Plugin (Shadowsocks Plugin)"
