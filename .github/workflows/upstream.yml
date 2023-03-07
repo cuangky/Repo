@@ -100,7 +100,7 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-edge
         svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
         svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
-        git_clone https://github.com/kiddin9/my-packages && mvdir my-packages
+        #git_clone https://github.com/kiddin9/my-packages && mvdir my-packages
         #git_clone https://github.com/kiddin9/openwrt-bypass && mvdir openwrt-bypass
         #git_clone https://github.com/kiddin9/luci-app-dnsfilter
         #git_clone https://github.com/kiddin9/aria2
