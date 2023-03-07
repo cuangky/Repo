@@ -97,7 +97,7 @@ jobs:
         svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
 
         svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-jellyfin
-
+        svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-edge
         svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
         svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
         git_clone https://github.com/kiddin9/my-packages && mvdir my-packages
@@ -105,7 +105,7 @@ jobs:
         #git_clone https://github.com/kiddin9/luci-app-dnsfilter
         #git_clone https://github.com/kiddin9/aria2
         #git_clone https://github.com/kiddin9/luci-app-baidupcs-web
-         git clone https://github.com/kiddin9/luci-theme-edge
+        
         #git_clone https://github.com/kiddin9/autoshare && mvdir autoshare
         #git_clone https://github.com/kiddin9/luci-app-xlnetacc
         #git_clone https://github.com/kiddin9/luci-app-wizard
