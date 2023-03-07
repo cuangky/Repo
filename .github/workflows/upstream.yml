@@ -90,6 +90,16 @@ jobs:
         rm -rf $1
         }
         (
+        svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/speedtestcli
+        svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
+
+        svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
+        svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
+
+        svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-jellyfin
+
+        svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
+        svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
         git_clone https://github.com/kiddin9/my-packages && mvdir my-packages
         #git_clone https://github.com/kiddin9/openwrt-bypass && mvdir openwrt-bypass
         #git_clone https://github.com/kiddin9/luci-app-dnsfilter
@@ -103,6 +113,9 @@ jobs:
         #git_clone https://github.com/kiddin9/openwrt-cloudreve && mvdir openwrt-cloudreve
         ) &
         (
+        git clone --depth 1 https://github.com/helmiau/helmiwrt-packages && mvdir helmiwrt-packages
+        git clone https://github.com/4IceG/luci-app-atinout-mod
+        git clone --depth 1 https://github.com/kzer00/shc
         git_clone https://github.com/xiaorouji/openwrt-passwall && mvdir openwrt-passwall
         git_clone https://github.com/fw876/helloworld && mvdir helloworld
         #git_clone https://github.com/Lienol/openwrt-package liep
