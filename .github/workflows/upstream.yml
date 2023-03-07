@@ -207,7 +207,7 @@ jobs:
         ) &
         #git_clone https://github.com/linkease/openwrt-app-actions &
         (
-        git_clone https://github.com/honwen/luci-app-shadowsocks-rust
+        #git_clone https://github.com/honwen/luci-app-shadowsocks-rust
         git_clone https://github.com/Hyy2001X/AutoBuild-Packages && rm -rf AutoBuild-Packages/luci-app-adguardhome && mvdir AutoBuild-Packages
         #git_clone https://github.com/Ausaci/luci-app-nat6-helper
         # git_clone https://github.com/wiwizcom/WiFiPortal && mvdir WiFiPortal
@@ -261,9 +261,9 @@ jobs:
         (
         git_sparse_clone develop "https://github.com/Ysurac/openmptcprouter-feeds" "openmptcp" luci-app-snmpd \
         luci-app-packet-capture luci-app-mail msmtp
-        git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
-        package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore  package/emortal/automount package/network/utils/fullconenat package/network/utils/fullconenat-nft \
-        package/network/utils/nftables package/utils/mhz package/libs/mbedtls package/libs/libnftnl package/firmware/wireless-regdb
+        #git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
+        #package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore  package/emortal/automount package/network/utils/fullconenat package/network/utils/fullconenat-nft \
+        #package/network/utils/nftables package/utils/mhz package/libs/mbedtls package/libs/libnftnl package/firmware/wireless-regdb
         ) &
 
         #git_sparse_clone master "https://github.com/coolsnowwolf/luci" "leluci" applications libs/luci-lib-fs
@@ -278,7 +278,7 @@ jobs:
         	fi
         done
 
-        git_sparse_clone master "https://github.com/coolsnowwolf/lede" "leanlede" package/lean package/network/services/shellsync
+        #git_sparse_clone master "https://github.com/coolsnowwolf/lede" "leanlede" package/lean package/network/services/shellsync
 
     - name: Delete duplicated packages
       run: |
