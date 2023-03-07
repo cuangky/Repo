@@ -308,11 +308,11 @@ jobs:
     - name: Modify
       run: |
         shopt -s extglob
-        set +e
-        sed -i \
-        -e "s/\(network\..*\)\.ifname/\1.device/g" \
-        `find \( -path "*/root/*" -o -path "*/files/*" -o -path "*/luasrc/*" \) ! -path "./base-files/*" ! -path "./dnsmasq/*" ! -path "./luci-base/*" ! -path "./ppp/*" -type f` &
-        (
+        #set +e
+        #sed -i \
+        #-e "s/\(network\..*\)\.ifname/\1.device/g" \
+        #`find \( -path "*/root/*" -o -path "*/files/*" -o -path "*/luasrc/*" \) ! -path "./base-files/*" ! -path "./dnsmasq/*" ! -path "./luci-base/*" ! -path "./ppp/*" -type f` &
+        #(
         function latest() {
           (curl -gs -H 'Content-Type: application/json' \
              -H "Authorization: Bearer ${{ secrets.REPO_TOKEN }}" \
