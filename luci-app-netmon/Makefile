@@ -59,8 +59,8 @@ define Package/$(PKG_NAME)/postinst
 		logger "  helmilog : restarting some apps..."
 		/etc/init.d/uhttpd restart
 	fi
-	[[ -f /www/tinyfm/tinyfm.php ]] && sed -i "s|tinyfm/index|tinyfm/tinyfm|g" /usr/lib/lua/luci/view/netmon/config.htm
-	[[ -f /www/tinyfm/index.php ]] && sed -i "s|tinyfm/tinyfm|tinyfm/index|g" /usr/lib/lua/luci/view/netmon/config.htm
+	# [[ -f /www/tinyfm/tinyfm.php ]] && sed -i "s|tinyfm/index|tinyfm/tinyfm|g" /usr/lib/lua/luci/view/netmon/config.htm
+	# [[ -f /www/tinyfm/index.php ]] && sed -i "s|tinyfm/tinyfm|tinyfm/index|g" /usr/lib/lua/luci/view/netmon/config.htm
 exit 0
 endef
 
