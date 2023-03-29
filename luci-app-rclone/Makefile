@@ -17,7 +17,7 @@ LUCI_DEPENDS:=+rclone \
 LUCI_PKGARCH:=all
 PKG_NAME:=luci-app-rclone
 PKG_VERSION:=1.4.1
-PKG_RELEASE:=86
+PKG_RELEASE:=87
 PKG_LICENSE:=GPLv3.0+
 PKG_MAINTAINER:=ElonH <elonhhuang@gmail.com>
 
