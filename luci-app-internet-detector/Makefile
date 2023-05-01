@@ -1,5 +1,5 @@
 #
-# (с) 2021 gSpot (https://github.com/gSpotx2f/luci-app-internet-detector)
+# (с) 2023 gSpot (https://github.com/gSpotx2f/luci-app-internet-detector)
 #
 
 include $(TOPDIR)/rules.mk
