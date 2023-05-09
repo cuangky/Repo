@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set -x
-
-echo test started
-./test.bash.x
-echo test ended
