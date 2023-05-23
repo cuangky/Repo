@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=internet-detector
 PKG_VERSION:=1.0
-PKG_RELEASE:=29
+PKG_RELEASE:=30
 PKG_MAINTAINER:=gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 
 include $(INCLUDE_DIR)/package.mk
