@@ -3,7 +3,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_VERSION:=1.0.2-20230619
-PKG_RELEASE:=188
+PKG_RELEASE:=189
 
 LUCI_TITLE:=LuCI support for Emby
 LUCI_PKGARCH:=all
