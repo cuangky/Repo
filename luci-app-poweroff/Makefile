@@ -1,18 +1,12 @@
-#
-# Copyright (C) 2020 xxx <xxx@xxx.com>
+# Copyright (C) 2016 Openwrt.org
 #
 # This is free software, licensed under the Apache License, Version 2.0 .
-#
+# Maintained by eSir Playground <https://github.com/esirplayground/luci-app-poweroff>
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-wrtbwmon
-
-PKG_LICENSE:=Apache-2.0
-PKG_MAINTAINER:=
-
-LUCI_TITLE:=A Luci module that uses wrtbwmon to track bandwidth usage
-LUCI_DEPENDS:=+wrtbwmon
+PKG_NAME:=luci-app-poweroff
+LUCI_TITLE:=LuCI Support of PowerOff Router
 LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
